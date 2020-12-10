@@ -25,7 +25,7 @@ A dockerized python application, that takes in a URL and saves a screenshot of t
 
 * <img src="https://img.icons8.com/dusk/30/000000/docker.png"/> [Docker](https://www.docker.com/m)
 * <img src="https://img.icons8.com/color/30/000000/python.png"/> [Python](https://www.python.org/)
-* <img src="https://img.icons8.com/officel/30/000000/selenium-test-automation.png"/> [Selenium]https://www.selenium.dev/)
+* <img src="https://img.icons8.com/officel/30/000000/selenium-test-automation.png"/> [Selenium](https://www.selenium.dev/)
 
 
 
