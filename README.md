@@ -39,7 +39,7 @@ You have two options to use it for your preference:
 
 2. Pull Docker image from [Docker Hub](https://hub.docker.com/) 
 
-For both of these options Docker is required (Steps for installation are specified below)
+For both of these options Docker installation is required (Steps for installation are specified below)
 
 Both steps are explained below
 
