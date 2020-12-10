@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/amitbiderman/screenshot_project">
-    <img src="images/logo.png" alt="Logo" width="200" height="200">
+    <img src="images/logo.png" alt="Logo" width="400" height="400">
   </a>
 
   <h3 align="center">Screenshot Program</h3>
