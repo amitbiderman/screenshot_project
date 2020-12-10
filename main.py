@@ -1,22 +1,26 @@
-from core import Screenshot
 import sys
-import os
+from core import WebSnapShooter
 
 
-class Main:
-    def __init__(self):
-        self.url_arg = sys.argv[1]
-        self.screenshot = None
+def main():
+    if len(sys.argv) < 2:
+        print("Error: no URL supplied.")
+        exit(1)
 
-    def main(self):
-        self.screenshot = Screenshot(self.url_arg)
-        while True:
-            self.screenshot.set_chrome_options()
-            self.screenshot.user_input()
-            self.screenshot.take_screenshot()
-            break
+    url_arg = sys.argv[1]
+
+    snapshooter = WebSnapShooter()
+    if not snapshooter.init_driver():
+        print("Error: failed to initialize WebSnapShooter")
+        exit(1)
+
+    if not snapshooter.take_screenshot(url_arg):
+        print("Error: failed to take a screenshot")
+        exit(1)
+
+    print("Finished successfully")
+    exit(0)
 
 
 if __name__ == '__main__':
-    main = Main()
-    main.main()
+    main()

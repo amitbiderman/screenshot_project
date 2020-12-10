@@ -1,51 +1,59 @@
 import re
-from selenium import webdriver
-from selenium.webdriver import Firefox
+from datetime import datetime
 import time
-from selenium.common.exceptions import WebDriverException
-from urllib3.exceptions import MaxRetryError
 import os.path
 import validators
+from selenium import webdriver
+from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.chrome.options import Options
+from urllib3.exceptions import MaxRetryError
 
 
-class Screenshot:
-
-    def __init__(self, url_arg):
-        self.url_arg = url_arg
+class WebSnapShooter:
+    def __init__(self):
+        self.url_arg = None
         self.driver = None
-        self.chrome_options = None
 
-    def user_input(self):
+    def format_url(self):
+        # Add default URL protocol (HTTPS) if missing
+        if not re.match('(?:[A-Za-z0-9-]+)://', self.url_arg):
+            self.url_arg = 'https://{}'.format(self.url_arg)
+
+    def validate_url(self):
         if self.url_arg is None:
-            exit(print("Please enter a valid URL address!"))
+            print("URL address doesn't exist!")
+            return False
 
         self.format_url()
 
         if not validators.url(self.url_arg):
-            exit(print("Please enter a valid URL address!"))
-        else:
-            self.open_url()
+            print("Please enter a valid URL address!")
+            return False
 
-    def set_chrome_options(self):
+        return True
+
+    def init_driver(self):
         """Sets chrome options for Selenium.
         Chrome options for headless browser is enabled.
         """
-        self.chrome_options = Options()
-        self.chrome_options.add_argument("--headless")
-        self.chrome_options.add_argument("--no-sandbox")
-        self.chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_prefs = {}
-        self.chrome_options.experimental_options["prefs"] = chrome_prefs
-        chrome_prefs["profile.default_content_settings"] = {"images": 2}
+        # Already initialized?
+        if self.driver is not None:
+            return True
 
-        self.driver = webdriver.Chrome(options=self.chrome_options)
+        browser_options = Options()
+        browser_options.add_argument("--headless")
+        browser_options.add_argument("--no-sandbox")
+        browser_options.add_argument("--disable-dev-shm-usage")
+        browser_prefs = {"profile.default_content_settings": {"images": 2}}
+        browser_options.experimental_options["prefs"] = browser_prefs
 
+        try:
+            self.driver = webdriver.Chrome(options=browser_options)
+        except WebDriverException:
+            print("Can't initialize web driver!")
+            return False
 
-    def format_url(self):
-        # Adding proper URL characters if missing
-        if not re.match('(?:http|ftp|https)://', self.url_arg):
-            self.url_arg = 'https://{}'.format(self.url_arg)
+        return True
 
     def open_url(self):
         # Check if Valid URL was provided
@@ -54,21 +62,36 @@ class Screenshot:
             self.driver.maximize_window()
         except (WebDriverException, MaxRetryError):
             self.driver.quit()
-            exit(print("Please enter a valid URL address!"))
+            print(f"Failed to open URL: {self.url_arg}")
+            return False
 
-    def take_screenshot(self):
-        number = 1
+        # Make sure the URL loaded
         time.sleep(1)
+        return True
 
-        while True:
-            picture = f"screenshot{number}.png"
-            if not os.path.exists(picture):
-                self.driver.get_screenshot_as_file(picture)
-                break
-            else:
-                number += 1
+    def take_screenshot(self, url_arg):
+        self.url_arg = url_arg
 
-        if os.path.exists(picture) and os.stat(picture).st_size != 0:
+        if not self.validate_url():
+            return False
+
+        if not self.open_url():
+            return False
+
+        # Get current date and time in format: dd_mm_YYYY__H_M_S
+        format = "%d_%m_%Y__%H_%M_%S"
+        timestamp = datetime.now().strftime(format)
+
+        picture = f"{timestamp}__screenshot.png"
+        try:
+            self.driver.get_screenshot_as_file(picture)
+        except WebDriverException:
+            print("Failed to take a screenshot")
+            return False
+
+        # Validate creation of the picture
+        return os.path.exists(picture) and os.stat(picture).st_size != 0
+
+    def __del__(self):
+        if self.driver is not None:
             self.driver.quit()
-        else:
-            self.take_screenshot()
