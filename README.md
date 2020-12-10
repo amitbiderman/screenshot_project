@@ -74,7 +74,7 @@ Both steps are explained below
 If you don't have Git on your local machine:
 * Windows
 
-[Direct Download Link] (https://git-scm.com/download/win )
+[Direct Download Link](https://git-scm.com/download/win)
 
 
 * Linux Debian
