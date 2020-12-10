@@ -35,7 +35,7 @@ A dockerized python application, that takes in a URL and saves a screenshot of t
 You have two options to use it for your preference:
 
 1. Clone this repository [Screenshot Project](https://github.com/amitbiderman/screenshot_project)
-* Installing Git is required for this step
+          * Installing Git is required for this step
 
 2. Pull Docker image from [Docker Hub](https://hub.docker.com/) 
 
@@ -49,9 +49,9 @@ Both steps are explained below
 
 * Windows
 [Download the latest Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
-```sh
-  Simply install after download is finished, restart your machine, and start the program.
-  ```
+
+- Simply install after download is finished, restart your machine, and start the program.
+
 
 * Linux Debian Using the Convenient Script
 ```sh
@@ -64,18 +64,18 @@ Both steps are explained below
 
 * macOS
 [Download the latest Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
-```sh
-  Simply install after download is finished, restart your machine, and start the program.
-  ```
+
+- Simply install after download is finished, restart your machine, and start the program.
+
 
 
 ### Cloning The Repository
 
 If you don't have Git on your local machine:
 * Windows
-```sh
-  [Direct Download Link] (https://git-scm.com/download/win )
-  ```
+
+[Direct Download Link] (https://git-scm.com/download/win )
+
 
 * Linux Debian
 ```sh
@@ -91,15 +91,15 @@ If you don't have Git on your local machine:
   ```
 
 
-* Create a new folder in your local machine.
-* Clone the repository
+1. Create a new folder in your local machine.
+2. Clone the repository
 
-* git clone
+3. git clone
   ```sh
   git clone https://github.com/amitbiderman/screenshot_project.git
   ```
 
-* Build the image (This could take a couple of minutes)
+4. Build the image (This could take a couple of minutes)
   ```sh
   docker build -t <Your Tag> .
   ```
@@ -107,8 +107,8 @@ If you don't have Git on your local machine:
 
 ### Pulling Image from Docker Hub
 
-* Create a new folder in your local machine.
-* Pull the image
+1. Create a new folder in your local machine.
+2. Pull the image
   ```sh
   docker pull amitbiderman/mimecast_project:latest
   ```
