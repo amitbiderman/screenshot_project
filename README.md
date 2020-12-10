@@ -99,7 +99,7 @@ If you don't have Git on your local machine:
 
 3. Build the image (This could take a couple of minutes)
   ```sh
-  docker build -t <Your Tag> .
+  docker build -t <Your Image name:Your tag> .
   ```
 
 
@@ -124,7 +124,7 @@ If pulled image from DockerHub:
   ```
 If created your own image with the build command:
   ```sh
- docker run -v /app -v $(pwd):/app amitbiderman/mimecast_project <ENTER URL HERE>
+ docker run -v /app -v $(pwd):/app <Your Image name:Your tag> <ENTER URL HERE>
   ```
   
   
