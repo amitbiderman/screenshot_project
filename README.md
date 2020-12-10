@@ -93,13 +93,11 @@ If you don't have Git on your local machine:
 
 1. Create a new folder in your local machine.
 2. Clone the repository
-
-3. git clone
   ```sh
   git clone https://github.com/amitbiderman/screenshot_project.git
   ```
 
-4. Build the image (This could take a couple of minutes)
+3. Build the image (This could take a couple of minutes)
   ```sh
   docker build -t <Your Tag> .
   ```
