@@ -140,6 +140,17 @@ If created your own image with the build command:
     <img src="images/docker-compose.png" alt="Logo" width="594" height="266">
   </a>
 
+```sh
+version: '3'
+services:
+  mimecast_project:
+    image: amitbiderman/mimecast_project
+    volumes:
+      - ".:/app"
+    command: youtube.com
+```
+
+
 2. And then  simply run:
 
   ```sh
