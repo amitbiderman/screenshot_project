@@ -17,7 +17,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+  <a href="https://github.com/amitbiderman/screenshot_project">
+    <img src="images/grah.png" alt="Logo" width="874" height="396">
+  </a>
 
 A dockerized python application, that takes in a URL and saves a screenshot of the desired URL on the host's machine.
 
