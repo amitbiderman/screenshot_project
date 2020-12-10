@@ -156,3 +156,5 @@ services:
   ```sh
   $ docker-compose up
   ```
+  
+  ## Congratulations! Your image is now in your project directory!
