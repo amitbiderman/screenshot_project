@@ -1,0 +1,7 @@
+version: '3'
+services:
+  mimecast_project:
+    image: amitbiderman/mimecast_project
+    volumes:
+      - ".:/app"
+    command: youtube.com
