@@ -116,7 +116,11 @@ If you don't have Git on your local machine:
 ## Usage
 Since the purpose of the program is to go to a URL and take a screenshot, a URL is needed to be specified.
 
-* You can either run the docker run command and specify volumes, image and URL at the end
+* You can either:
+
+## Use docker run command
+
+run the docker run command and specify volumes, image and URL at the end
 
 If pulled image from DockerHub:
   ```sh
@@ -127,8 +131,16 @@ If created your own image with the build command:
  docker run -v /app -v $(pwd):/app <Your Image name:Your tag> <ENTER URL HERE>
   ```
   
-  
-* Or edit the docker-compose.yml file with your wanted URL and and simply run:
+ 
+ ## Use docker-compose up command
+ 
+1. Edit the docker-compose.yml file with your wanted URL: (replace youtube.com in the example with YOUR wanted URL !)
+
+<a href="https://github.com/amitbiderman/screenshot_project">
+    <img src="images/docker-compose.png" alt="Logo" width="100" height="100">
+  </a>
+
+2. And then  simply run:
 
   ```sh
   $ docker-compose up
