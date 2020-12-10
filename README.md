@@ -35,7 +35,7 @@ A dockerized python application, that takes in a URL and saves a screenshot of t
 You have two options to use it for your preference:
 
 1. Clone this repository [Screenshot Project](https://github.com/amitbiderman/screenshot_project)
-          * Installing Git is required for this step
+       * Installing Git is required for this step
 
 2. Pull Docker image from [Docker Hub](https://hub.docker.com/) 
 
