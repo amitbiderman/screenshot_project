@@ -137,7 +137,7 @@ If created your own image with the build command:
 1. Edit the docker-compose.yml file with your wanted URL: (replace youtube.com in the example with YOUR wanted URL !)
 
 <a href="https://github.com/amitbiderman/screenshot_project">
-    <img src="images/docker-compose.png" alt="Logo" width="100" height="100">
+    <img src="images/docker-compose.png" alt="Logo" width="594" height="266">
   </a>
 
 2. And then  simply run:
