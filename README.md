@@ -127,7 +127,7 @@ If pulled image from DockerHub:
   ```
 If you created your own image:
   ```sh
- docker run -v /app -v $(pwd):/app <Your Image name:Your tag> <ENTER URL HERE>
+ docker run -v /app/screenshot -v $(pwd):/app/screenshot <Your Image name:Your tag> <ENTER URL HERE>
   ```
   
  
