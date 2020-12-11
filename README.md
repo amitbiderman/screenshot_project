@@ -42,7 +42,6 @@ You have two options to use it for your preference:
 
 For both of these options Git and Docker installation is required (Steps for installation are specified below)
 
-Both steps are explained below
 
 ### Installing Docker
 
