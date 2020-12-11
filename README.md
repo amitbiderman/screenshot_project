@@ -140,6 +140,7 @@ If you created your own image:
     <img src="images/docker-compose.png" alt="Logo" width="594" height="266">
   </a>
 
+File content for easy copy:
 ```sh
 version: '3'
 services:
