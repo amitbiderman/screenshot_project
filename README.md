@@ -123,7 +123,7 @@ run the docker run command and specify volumes, image and URL at the end
 
 If pulled image from DockerHub:
   ```sh
- docker run -v /app -v $(pwd):/app amitbiderman/mimecast_project <ENTER URL HERE>
+ docker run -v /app/screenshot -v $(pwd):/app/screenshot amitbiderman/mimecast_project <ENTER URL HERE>
   ```
 If you created your own image:
   ```sh
