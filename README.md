@@ -45,12 +45,12 @@ For both of these options Git and Docker installation is required.
 
 ### Installing Docker
 
-1. Install Docker [Documentation link](https://docs.docker.com/get-docker/):
+Install Docker [Documentation link](https://docs.docker.com/get-docker/):
 
 * Windows
 [Download the latest Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
 
-- Simply install after download is finished, restart your machine, and start the program.
+Simply install after download is finished, restart your machine, and start the program.
 
 
 * Linux Debian Using the Convenient Script
@@ -59,13 +59,13 @@ For both of these options Git and Docker installation is required.
   $ sudo sh get-docker.sh
   ```
   
-* For other Linux Distributions Please Follow [This Link] (https://docs.docker.com/engine/install/)
+For other Linux Distributions Please Follow [This Link] (https://docs.docker.com/engine/install/)
 
 
 * macOS
 [Download the latest Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
 
-- Simply install after download is finished, restart your machine, and start the program.
+Simply install after download is finished, restart your machine, and start the program.
 
 ### Installing Git
 
