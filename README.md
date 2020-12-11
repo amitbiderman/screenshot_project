@@ -18,7 +18,7 @@
 ## About The Project
 
   <a href="https://github.com/amitbiderman/screenshot_project">
-    <img src="images/graph.png" alt="Logo" width="874" height="396">
+    <img src="images/graph.jpg" alt="Logo" width="874" height="396">
   </a>
 
 A dockerized python application, that takes in a URL and saves a screenshot of the desired URL on the host's machine.
@@ -36,23 +36,21 @@ A dockerized python application, that takes in a URL and saves a screenshot of t
 
 You have two options to use it for your preference:
 
-1. Clone this repository [Screenshot Project](https://github.com/amitbiderman/screenshot_project)
-       * Installing Git is required for this step
+1. Build Your Image.
 
 2. Pull Docker image from [Docker Hub](https://hub.docker.com/) 
 
-For both of these options Docker installation is required (Steps for installation are specified below)
+For both of these options Git and Docker installation is required.
 
-Both steps are explained below
 
 ### Installing Docker
 
-1. Install Docker [Documentation link](https://docs.docker.com/get-docker/):
+Install Docker [Documentation link](https://docs.docker.com/get-docker/):
 
 * Windows
 [Download the latest Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
 
-- Simply install after download is finished, restart your machine, and start the program.
+Simply install after download is finished, restart your machine, and start the program.
 
 
 * Linux Debian Using the Convenient Script
@@ -61,19 +59,16 @@ Both steps are explained below
   $ sudo sh get-docker.sh
   ```
   
-* For other Linux Distributions Please Follow [This Link] (https://docs.docker.com/engine/install/)
+For other Linux Distributions Please Follow [This Link] (https://docs.docker.com/engine/install/)
 
 
 * macOS
 [Download the latest Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
 
-- Simply install after download is finished, restart your machine, and start the program.
+Simply install after download is finished, restart your machine, and start the program.
 
+### Installing Git
 
-
-### Cloning The Repository
-
-If you don't have Git on your local machine:
 * Windows
 
 [Direct Download Link](https://git-scm.com/download/win)
@@ -92,6 +87,8 @@ If you don't have Git on your local machine:
   $ git --version
   ```
 
+### Build you image
+
 
 1. Create a new folder in your local machine.
 2. Clone the repository
@@ -101,7 +98,7 @@ If you don't have Git on your local machine:
 
 3. Build the image (This could take a couple of minutes)
   ```sh
-  docker build -t <Your Image name:Your tag> .
+  docker build -t <Your Image Name:Your Tag> .
   ```
 
 
@@ -118,7 +115,7 @@ If you don't have Git on your local machine:
 ## Usage
 Since the purpose of the program is to go to a URL and take a screenshot, a URL is needed to be specified.
 
-* You can either:
+That can be achieved using either docker run command, or taking advantage of the docker-compose file.
 
 ## Use docker run command
 
@@ -128,7 +125,7 @@ If pulled image from DockerHub:
   ```sh
  docker run -v /app -v $(pwd):/app amitbiderman/mimecast_project <ENTER URL HERE>
   ```
-If created your own image with the build command:
+If you created your own image:
   ```sh
  docker run -v /app -v $(pwd):/app <Your Image name:Your tag> <ENTER URL HERE>
   ```
@@ -142,6 +139,7 @@ If created your own image with the build command:
     <img src="images/docker-compose.png" alt="Logo" width="594" height="266">
   </a>
 
+File content for easy copy:
 ```sh
 version: '3'
 services:
