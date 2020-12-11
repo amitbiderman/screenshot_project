@@ -36,12 +36,11 @@ A dockerized python application, that takes in a URL and saves a screenshot of t
 
 You have two options to use it for your preference:
 
-1. Clone this repository [Screenshot Project](https://github.com/amitbiderman/screenshot_project)
-       * Installing Git is required for this step
+1.Build Your Image
 
 2. Pull Docker image from [Docker Hub](https://hub.docker.com/) 
 
-For both of these options Docker installation is required (Steps for installation are specified below)
+For both of these options Git and Docker installation is required (Steps for installation are specified below)
 
 Both steps are explained below
 
@@ -69,11 +68,8 @@ Both steps are explained below
 
 - Simply install after download is finished, restart your machine, and start the program.
 
+### Installing Git
 
-
-### Cloning The Repository
-
-If you don't have Git on your local machine:
 * Windows
 
 [Direct Download Link](https://git-scm.com/download/win)
@@ -91,6 +87,8 @@ If you don't have Git on your local machine:
 ```sh
   $ git --version
   ```
+
+### Build you image
 
 
 1. Create a new folder in your local machine.
