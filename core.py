@@ -1,4 +1,5 @@
 import re
+import shutil
 from datetime import datetime
 import time
 import os.path
@@ -10,6 +11,8 @@ from urllib3.exceptions import MaxRetryError
 
 
 class WebSnapShooter:
+    SCREENSHOOT_PATH = "/app/screenshot"
+
     def __init__(self):
         self.url_arg = None
         self.driver = None
@@ -82,12 +85,12 @@ class WebSnapShooter:
         format = "%d_%m_%Y__%H_%M_%S"
         timestamp = datetime.now().strftime(format)
 
-        picture = f"{timestamp}__screenshot.png"
-        try:
-            self.driver.get_screenshot_as_file(picture)
-        except WebDriverException:
-            print("Failed to take a screenshot")
-            return False
+        if not os.path.exists(self.SCREENSHOOT_PATH):
+            os.mkdir(self.SCREENSHOOT_PATH)
+
+        picture = os.path.join(self.SCREENSHOOT_PATH, f"{timestamp}__screenshot.png")
+
+        self.driver.get_screenshot_as_file(picture)
 
         # Validate creation of the picture
         return os.path.exists(picture) and os.stat(picture).st_size != 0

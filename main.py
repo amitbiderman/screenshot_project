@@ -1,5 +1,6 @@
 import sys
 from core import WebSnapShooter
+import os
 
 
 def main():
@@ -8,7 +9,6 @@ def main():
         exit(1)
 
     url_arg = sys.argv[1]
-
     snapshooter = WebSnapShooter()
     if not snapshooter.init_driver():
         print("Error: failed to initialize WebSnapShooter")
