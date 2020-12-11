@@ -36,7 +36,7 @@ A dockerized python application, that takes in a URL and saves a screenshot of t
 
 You have two options to use it for your preference:
 
-1.Build Your Image
+1. Build Your Image.
 
 2. Pull Docker image from [Docker Hub](https://hub.docker.com/) 
 
@@ -99,7 +99,7 @@ Both steps are explained below
 
 3. Build the image (This could take a couple of minutes)
   ```sh
-  docker build -t <Your Image name:Your tag> .
+  docker build -t <Your Image Name:Your Tag> .
   ```
 
 
@@ -116,7 +116,7 @@ Both steps are explained below
 ## Usage
 Since the purpose of the program is to go to a URL and take a screenshot, a URL is needed to be specified.
 
-* You can either:
+That can be achieved using either docker run command, or taking advantage of the docker-compose file.
 
 ## Use docker run command
 
@@ -126,7 +126,7 @@ If pulled image from DockerHub:
   ```sh
  docker run -v /app -v $(pwd):/app amitbiderman/mimecast_project <ENTER URL HERE>
   ```
-If created your own image with the build command:
+If you created your own image:
   ```sh
  docker run -v /app -v $(pwd):/app <Your Image name:Your tag> <ENTER URL HERE>
   ```
