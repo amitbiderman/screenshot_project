@@ -38,9 +38,11 @@ You have two options to use it for your preference:
 
 1. Build Your Image.
 
+For this option Git is required.
+
 2. Pull Docker image from [Docker Hub](https://hub.docker.com/) 
 
-For both of these options Git and Docker installation is required.
+For both of these options Docker installation is required.
 
 
 ### Installing Docker
@@ -131,7 +133,7 @@ If you created your own image:
   ```
   
  
- ## Use docker-compose up command
+ ## Use docker-compose up command (docker-compose file must be in project repository for this option!)
  
 1. Edit the docker-compose.yml file with your wanted URL: (replace youtube.com in the example with YOUR wanted URL !)
 
