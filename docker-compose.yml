@@ -3,5 +3,5 @@ services:
   mimecast_project:
     image: amitbiderman/mimecast_project
     volumes:
-      - ".:/app"
+      - ".:/app/screenshot"
     command: youtube.com
