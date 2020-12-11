@@ -107,7 +107,7 @@ Simply install after download is finished, restart your machine, and start the p
 1. Create a new folder in your local machine.
 2. Pull the image
   ```sh
-  docker pull amitbiderman/mimecast_project:latest
+  docker pull amitbiderman/mimecast_project_fix:latest
   ```
 
 
@@ -123,7 +123,7 @@ run the docker run command and specify volumes, image and URL at the end
 
 If pulled image from DockerHub:
   ```sh
- docker run -v /app/screenshot -v $(pwd):/app/screenshot amitbiderman/mimecast_project <ENTER URL HERE>
+ docker run -v /app/screenshot -v $(pwd):/app/screenshot amitbiderman/mimecast_project_fix <ENTER URL HERE>
   ```
 If you created your own image:
   ```sh
@@ -144,7 +144,7 @@ File content for easy copy:
 version: '3'
 services:
   mimecast_project:
-    image: amitbiderman/mimecast_project
+    image: amitbiderman/mimecast_project_fix
     volumes:
       - ".:/app"
     command: youtube.com
