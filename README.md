@@ -40,7 +40,7 @@ You have two options to use it for your preference:
 
 2. Pull Docker image from [Docker Hub](https://hub.docker.com/) 
 
-For both of these options Git and Docker installation is required (Steps for installation are specified below)
+For both of these options Git and Docker installation is required.
 
 
 ### Installing Docker
